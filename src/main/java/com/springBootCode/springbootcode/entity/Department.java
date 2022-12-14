@@ -37,4 +37,11 @@ public class Department {
     public void setDepartmentEmployeeCode(String departmentEmployeeCode) {
         this.departmentEmployeeCode = departmentEmployeeCode;
     }
+
+    public Department(long departmentId, String departmentName, String departmentAddress, String departmentEmployeeCode) {
+        this.departmentId = departmentId;
+        this.departmentName = departmentName;
+        this.departmentAddress = departmentAddress;
+        this.departmentEmployeeCode = departmentEmployeeCode;
+    }
 }

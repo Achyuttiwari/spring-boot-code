@@ -1,6 +1,16 @@
 package com.springBootCode.springbootcode.entity;
 
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Department {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long departmentId;
     private String departmentName;
     private String departmentAddress;
@@ -43,5 +53,18 @@ public class Department {
         this.departmentName = departmentName;
         this.departmentAddress = departmentAddress;
         this.departmentEmployeeCode = departmentEmployeeCode;
+    }
+    public Department(){
+
+    }
+
+    @Override
+    public String toString() {
+        return "Department{" +
+                "departmentId=" + departmentId +
+                ", departmentName='" + departmentName + '\'' +
+                ", departmentAddress='" + departmentAddress + '\'' +
+                ", departmentEmployeeCode='" + departmentEmployeeCode + '\'' +
+                '}';
     }
 }
